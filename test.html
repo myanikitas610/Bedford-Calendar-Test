@@ -1,0 +1,25 @@
+<html>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      // Read the CSV file
+      $.ajax({
+        type: "GET",
+        url: "file:///Users/myanikitas/Desktop/Bedford%20Calendar%20Test/Users/myanikitas/Desktop/Beford%20Calendar%20Test/test.csv",
+        dataType: "text",
+        success: function(csvData) {
+          // Parse CSV to objects
+          var data = $.csv.toObjects(csvData);
+  
+          // Log the parsed data
+          console.log(data);
+        }
+      });
+    });
+
+  </script>
+  </body>
+  </html>
