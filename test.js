@@ -1,4 +1,8 @@
-var csv = require('jquery-csv');
-var data = $.csv.toObjects(test.csv)
+const csvFilePath='/Users/myanikitas/Desktop/Bedford Calendar Test/test.csv'
+const csv=require('csvtojson')
+csv()
+.fromFile(csvFilePath)
+.then((jsonObj)=>{
+    console.log(jsonObj);
 
-console.log(data);
+})
